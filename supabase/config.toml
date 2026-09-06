@@ -1,0 +1,8 @@
+[functions.razorpay-create-order]
+verify_jwt = false
+
+[functions.razorpay-verify]
+verify_jwt = false
+
+[functions.release-expired-locks]
+verify_jwt = false

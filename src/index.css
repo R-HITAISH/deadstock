@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-radius: 0 !important;
+  }
+
+  body {
+    background-color: #EDEBE4;
+    color: #121212;
+    font-family: 'Space Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #FF4D00;
+    color: #EDEBE4;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #121212;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FF4D00;
+    border: 2px solid #121212;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-body text-sm font-bold uppercase tracking-wider border-2 border-ink transition-all duration-150 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-bone border-ink shadow-hard hover:bg-accent-hover hover:shadow-hard-sm active:shadow-none active:translate-x-1.5 active:translate-y-1.5;
+  }
+
+  .btn-dark {
+    @apply bg-ink text-bone border-ink shadow-hard hover:bg-ink-700 hover:shadow-hard-sm active:shadow-none active:translate-x-1.5 active:translate-y-1.5;
+  }
+
+  .btn-light {
+    @apply bg-bone text-ink border-ink shadow-hard hover:bg-bone-200 hover:shadow-hard-sm active:shadow-none active:translate-x-1.5 active:translate-y-1.5;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-ink border-ink hover:bg-ink hover:text-bone;
+  }
+
+  .card {
+    @apply bg-bone border-2 border-ink shadow-hard transition-all duration-200 hover:shadow-hard-lg hover:-translate-y-1 hover:-translate-x-1;
+  }
+
+  .card-dark {
+    @apply bg-ink-800 border-2 border-ink shadow-hard-bone transition-all duration-200 hover:shadow-hard-lg hover:-translate-y-1 hover:-translate-x-1;
+  }
+
+  .tag {
+    @apply inline-block px-2 py-1 font-body text-xs font-bold uppercase tracking-wider border border-ink;
+  }
+
+  .tag-accent {
+    @apply bg-accent text-bone border-ink;
+  }
+
+  .tag-dark {
+    @apply bg-ink text-bone border-ink;
+  }
+
+  .input-field {
+    @apply w-full bg-bone-50 border-2 border-ink px-4 py-3 font-body text-sm text-ink placeholder:text-muted focus:outline-none focus:border-accent transition-colors;
+  }
+
+  .filter-btn {
+    @apply px-4 py-2 font-body text-xs font-bold uppercase tracking-wider border-2 border-ink transition-all duration-150 cursor-pointer;
+  }
+
+  .filter-btn-active {
+    @apply bg-ink text-bone shadow-hard-sm;
+  }
+
+  .filter-btn-inactive {
+    @apply bg-bone text-ink hover:bg-ink hover:text-bone;
+  }
+
+  .stamp {
+    @apply inline-flex items-center justify-center rounded-full border-[3px] border-ink font-display uppercase leading-none;
+  }
+}
